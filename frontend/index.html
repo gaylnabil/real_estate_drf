@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prédiction Prix Immobilier</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <h1>📊 Estimation Prix Immobilier (IA)</h1>
+
+    <div class="card">
+        <label for="file">Sélectionner un dataset CSV :</label>
+        <input type="file" id="fileInput" accept=".csv">
+        <button onclick="trainModel()">Démarrer l'entraînement du modèle</button>
+        <label id="uploadStatus">Upload status</label>
+    </div>
+
+    <div class="card">
+        <button onclick="visualizeData()">Visualiser les données</button>
+        <canvas id="chart" height="200"></canvas>
+    </div>
+
+    <div class="card">
+        <label for="surface">Superficie (en m²) :</label>
+        <input type="number" id="surface">
+        <button onclick="predictPrice()">Estimer le prix</button>
+        <div id="prediction"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
